@@ -12,13 +12,16 @@
 
     <h1>AI Text Assistant</h1>
 
-    <p>Welcome to your first AI-powered Django project.</p>
+    <p>Enter your text below.</p>
 
     <form method="POST">
 
         {% csrf_token %}
 
-        <label>Enter your text:</label>
+
+        {{ form.as_p }}
+        
+        <!-- <label>Enter your text:</label>
 
         <br><br>
 
@@ -26,14 +29,31 @@
             name="user_text"
             rows="6"
             cols="50"
-            placeholder="Write something here..."
+            placeholder="Write something..."
         ></textarea>
 
         <br><br>
+        <label>Select Action:</label>
+        <br><br>
+        <select name="action">
+            <option value="summarize">Summarize</option>
+            <option value="explain">Explain</option>
+        </select> -->
 
         <button type="submit">Submit Text</button>
 
     </form>
+
+    {% if result %}
+        <h2>Submitted successfully</h2>
+        <pre>{{result}}</pre>
+    {% endif %}
+    <!-- {% if user_text %}
+        <h2>Your Submitted Text:</h2>
+        <p>{{user_text}}</p>
+        <h2>Selected Action:</h2>
+        <p>{{ action }}</p>
+    {% endif %} -->
 
 </body>
 </html>
