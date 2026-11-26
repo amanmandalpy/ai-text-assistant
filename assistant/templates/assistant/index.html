@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Text Assistant</title>
+</head>
+
+<body>
+
+    <h1>AI Text Assistant</h1>
+
+    <p>Welcome to your first AI-powered Django project.</p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Enter your text:</label>
+
+        <br><br>
+
+        <textarea
+            name="user_text"
+            rows="6"
+            cols="50"
+            placeholder="Write something here..."
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">Submit Text</button>
+
+    </form>
+
+</body>
+</html>
