@@ -43,11 +43,14 @@
         <button type="submit">Submit Text</button>
 
     </form>
-
-    {% if result %}
+        {% if result %}
+        <h2>Assistant Result</h2>
+        <p>{{result}}</p>
+        {% endif %}
+    <!-- {% if result %}
         <h2>Submitted successfully</h2>
         <pre>{{result}}</pre>
-    {% endif %}
+    {% endif %} -->
     <!-- {% if user_text %}
         <h2>Your Submitted Text:</h2>
         <p>{{user_text}}</p>
